@@ -20,7 +20,7 @@ three
 
         use cmd enter my project => udui-vue
 
-        you can try $ npm ren dev  ? next : good!
+        you can try $ npm ren dev  ? good : next !
 
         you also can try try delete node_module file 
             next $ npm install      /* ---an zhuang yi lai */
@@ -28,7 +28,15 @@ three
                  $ npm run dev      ok?  it`s good  err?  please next
         no next you try try baidu and google ok? 
 
+four
 
+    npm run dev  is OK??   good!
+    why browser is blank（ nothing ）
+    because you don`t entry hash
+
+    http://localhost:8080/#/index    in browser open this url 
+
+    hehe
 
 
 
