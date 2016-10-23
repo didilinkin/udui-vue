@@ -5,23 +5,22 @@
     </header>
     <banner></banner>
     <indexContent></indexContent>
+    <testContent></testContent>
   </div>
 </template>
 
 <script>
 
+import _store from './vuex/store' // import 我们刚刚创建的 store
 import banner from './component/banner.vue'
 import indexContent from './component/indexContent.vue'
+import testContent from './component/testcontent.vue'
 
-const components = { banner,indexContent }
+const components = { banner,indexContent,testContent }
 export default {
   name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },
-  components : components
+  components : components,
+  store: _store // 在根组件加入 store，让它的子组件和 store 连接,
 }
 </script>
 
