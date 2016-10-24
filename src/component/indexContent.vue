@@ -1,7 +1,7 @@
 <template>
   <div id="indexComtent">
     <h1>{{mas}}</h1>
-    <button @click="increment">按钮</button>
+    <button @click="increment(num)">按钮</button>
   </div>
 </template>
 <script type="text/javascript">
@@ -9,7 +9,8 @@
 export default {
   data () {
     return {
-      mas: "主体内容"
+      mas: "主体内容",
+      num : {type: 'increment',amount: 10}
     }
   },
   vuex: {
@@ -17,10 +18,15 @@ export default {
       //increment: incrementCounter
     }
   },
-  methods : {
-  	increment : function () {
-  		this.$store.commit('increment',1)
-  	}
+  // methods : {
+  // 	increment : function () {
+  // 		this.$store.commit('increment',1)
+  // 	}
+  // },
+  methods: {
+    increment (num) {
+      this.$store.dispatch(num)
+    }
   }
 }
 </script>

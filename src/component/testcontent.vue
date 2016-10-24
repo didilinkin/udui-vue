@@ -4,24 +4,12 @@
   </div>
 </template>
 <script type="text/javascript">
-//import { getCount } from './../vuex/getters'
+import { mapGetters } from 'vuex'
+
 export default {
-    computed: {
-      counterValue () {
-        return this.$store.getters.getCount
-      }
-    },
-    data () {
-      return {
-        
-      }
-    },
-    vuex: {
-      getters: {
-        // 注意在这里你需要 `getCount` 函数本身而不是它的执行结果 'getCount()'
-        //counterValue: getCount
-      }
-    }
+    computed: mapGetters({
+      counterValue: 'getCount'
+    })
 }
 </script>
 
