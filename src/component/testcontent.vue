@@ -4,11 +4,17 @@
   </div>
 </template>
 <script type="text/javascript">
+import store from './../vuex/store' // import 我们刚刚创建的 store
 import { getCount } from './../vuex/getters'
 export default {
+    computed: {
+      counterValue () {
+        return store.state.count
+      }
+    },
     data () {
       return {
-        counterValue: "1"
+        
       }
     },
     vuex: {

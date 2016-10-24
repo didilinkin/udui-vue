@@ -5,8 +5,8 @@
   </div>
 </template>
 <script type="text/javascript">
-import { incrementCounter } from './../vuex/actions'
 import store from './../vuex/store' // import 我们刚刚创建的 store
+import { incrementCounter } from './../vuex/actions'
 export default {
   data () {
     return {
@@ -20,7 +20,7 @@ export default {
   },
   methods : {
   	increment : function () {
-  		store.commit('increment')
+  		store.commit('increment',1)
   	}
   }
 }
