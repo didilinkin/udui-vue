@@ -7,7 +7,7 @@ import VueResource from 'vue-resource'
 Vue.use(VueRouter)
 Vue.use(VueResource);
 
-//import store from './vuex/store' // import 我们刚刚创建的 store
+import store from './vuex/store' // import 我们刚刚创建的 store
 
 import appIndex from './App.vue'
 import _footMenu from './component/footmenu.vue'
@@ -31,6 +31,13 @@ const footMenu = _footMenu
 const router = new VueRouter({
 
   routes: [
+    {
+      path: '/',
+      components: {
+        default: app,
+        footerMenu : footMenu
+      }
+    },
   	{
       path: '/index',
       components: {
@@ -90,7 +97,8 @@ const router = new VueRouter({
 
 new Vue({
   el: '#app',
-  router
+  router,
+  store
 }).$mount('#app')
 
 

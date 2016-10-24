@@ -16,17 +16,16 @@ const mutations = {
     state.count = state.count + amount;
   }
 }
+import _getters from './getters'
+const getters = _getters;
 
-const getters = {
-	getCount :  function(state) {
-    	return state.count
-	}
-}
-
+// import _actions from './actions'
+// const actions = _actions;
 // 整合初始状态和变更函数，我们就得到了我们所需的 store
 // 至此，这个 store 就可以连接到我们的应用中
 export default new Vuex.Store({
   state,
   mutations,
   getters
+  //actions
 })

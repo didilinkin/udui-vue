@@ -11,7 +11,6 @@
 
 <script>
 
-import _store from './vuex/store' // import 我们刚刚创建的 store
 import banner from './component/banner.vue'
 import indexContent from './component/indexContent.vue'
 import testContent from './component/testcontent.vue'
@@ -19,8 +18,7 @@ import testContent from './component/testcontent.vue'
 const components = { banner,indexContent,testContent }
 export default {
   name: 'app',
-  components : components,
-  store: _store // 在根组件加入 store，让它的子组件和 store 连接,
+  components : components
 }
 </script>
 
