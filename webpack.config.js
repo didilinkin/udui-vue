@@ -20,7 +20,8 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        query: {presets: ['es2015', 'stage-0']}
       },
       {
         test: /\.(png|jpg|gif|svg)$/,

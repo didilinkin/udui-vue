@@ -3,20 +3,26 @@
     <header class="clearfix">
       <div class="sc">优兑商城</div>
     </header>
-    <banner></banner>
+    <banner v-bind:imgArr="getCarousel"></banner>
     <indexContent></indexContent>
     <testContent></testContent>
   </div>
 </template>
 
 <script>
-
+import { mapGetters } from 'vuex'
 import banner from './component/banner.vue'
 import indexContent from './component/indexContent.vue'
 import testContent from './component/testcontent.vue'
 
 const components = { banner,indexContent,testContent }
 export default {
+  computed: mapGetters({
+    getCarousel: 'getCarousel'
+  }),
+  created () {
+    this.$store.dispatch('getIndexData')
+  },
   name: 'app',
   components : components
 }

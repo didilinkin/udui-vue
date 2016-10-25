@@ -1,9 +1,7 @@
 <template>
 	<div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide" v-for="d in imgArr"><img :src="d.linkedImg"></div>
             </div>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
@@ -20,11 +18,7 @@
 <script type="text/javascript">
 import swiper from '../../static/swiper.min.js'
 export default {
-  data () {
-    return {
-      mas: "主体内容"
-    }
-  },
+  props : ['imgArr'],
   mounted: function () {
 	  this.$nextTick(function () {
 	    let mySwiper = new Swiper (
@@ -53,6 +47,7 @@ export default {
 @import '../../static/swiper.min.css';
 .swiper-container {
         width: 100%;
-        height: 1.44rem;
+        height: 2.44rem;
     }  
+    .swiper-slide img {width: 100%; height: 100%;}
 </style>
