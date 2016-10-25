@@ -10,8 +10,9 @@ export default {
         var aaa = null;
         return Vue.http.get(url);
     },
-    postDataVue: function (url, data) {
-        return Vue.http.post(url,data);
+    postDataVue: function (url, data,options) {
+        Vue.http.options.emulateJSON = true;
+        return Vue.http.post(url,data,options);
     },
     jsonpDataVue : function (url) {
         return Vue.http.sonp(url);
