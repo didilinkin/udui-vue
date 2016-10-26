@@ -1,8 +1,9 @@
 <template>
-  <div id="header">
-  	<router-link id="bacnBtn" to="/index">返回</router-link>
-  	<p>{{title}}</p>
-  </div>
+  <header class="user-header">
+    <router-link id="back" to="/index">返回</router-link>
+    <p class="headTxt">{{title}}</p>
+    <a class="goAhead"><i class="iconfont icon-"></i></a>
+  </header>
 </template>
 
 <script type="text/javascript">

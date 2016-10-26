@@ -1,11 +1,18 @@
 <template>
-  <div id="app">
-    <header class="clearfix">
-      <div class="sc">优兑商城</div>
-    </header>
-    <banner v-bind:imgArr="getCarousel"></banner>
-    <indexContent></indexContent>
-    <testContent></testContent>
+  <div>
+    <!-- 页面加载loading -->
+    <!-- <loading :show="loading"></loading> -->
+    <cover :show="loading"></cover>
+    <transition name="slide-fade">
+      <div v-show="!loading">
+        <header class="clearfix">
+          <div class="sc">优兑商城</div>
+        </header>
+        <banner v-bind:imgArr="getCarousel"></banner>
+        <indexContent></indexContent>
+        <testContent></testContent>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -14,10 +21,18 @@ import { mapGetters } from 'vuex'
 import banner from './component/banner.vue'
 import indexContent from './component/indexContent.vue'
 import testContent from './component/testcontent.vue'
+import loading from './component/loading.vue'
+import cover from './component/cover.vue'//欢迎动画组件
 
-const components = { banner,indexContent,testContent }
+const components = { banner,indexContent,testContent,loading,cover }
 export default {
+  data(){
+    return {
+      lo : false
+    }
+  },
   computed: mapGetters({
+    loading : 'loading',
     getCarousel: 'getCarousel'
   }),
   created () {
