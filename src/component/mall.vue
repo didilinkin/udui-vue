@@ -1,7 +1,9 @@
 <template>
-  <div id="mall">
-  	<headnav v-bind:title="pagetitle"></headnav>
+<transition name="slide-fade">
+  <div id="mall"  v-show="true">
+    <headnav v-bind:title="pagetitle"></headnav>
   </div>
+</transition>
 </template>
 
 <script type="text/javascript">

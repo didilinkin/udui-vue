@@ -102,6 +102,8 @@
     background-size: 100px 500px;
     -webkit-animation: loadingPlus 400ms steps(1) infinite;
     animation: loadingPlus 400ms steps(1) infinite;
+    transform:scale(3)
+
   }
   .ui-loading-wrap {
     position: fixed;
@@ -109,6 +111,7 @@
     z-index: 10000;
     width: 100%;
     height: 100%;
+    background: #fff;
   }
 </style>
 
