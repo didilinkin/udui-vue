@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
 
-import headnav from './header.vue'
+import headnav from './common/header.vue'
 const components = { headnav }
 export default {
   data () {

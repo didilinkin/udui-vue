@@ -16,7 +16,7 @@
 
 <script type="text/javascript">
 import { mapActions } from 'vuex'
-import headnav from './header.vue'
+import headnav from './common/header.vue'
 const components = { headnav }
 export default {
   data () {

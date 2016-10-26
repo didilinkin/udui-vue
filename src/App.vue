@@ -2,7 +2,7 @@
   <div>
     <!-- 页面加载loading -->
     <!-- <loading :show="loading"></loading> -->
-    <cover :show="loading"></cover>
+    <cover :show="!loading"></cover>
     <transition name="slide-fade">
       <div v-show="!loading">
         <header class="clearfix">
@@ -18,10 +18,10 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import banner from './component/banner.vue'
+import banner from './component/common/banner.vue'
 import indexContent from './component/indexContent.vue'
 import testContent from './component/testcontent.vue'
-import loading from './component/loading.vue'
+import loading from './component/common/loading.vue'
 import cover from './component/cover.vue'//欢迎动画组件
 
 const components = { banner,indexContent,testContent,loading,cover }

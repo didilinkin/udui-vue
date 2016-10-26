@@ -8,7 +8,7 @@ import footMenu from './../component/footmenu.vue'
 import mall from './../component/mall.vue'
 import tcshop from './../component/tcshop.vue'
 import shopcar from './../component/shopcar.vue'
-import user from './../component/user.vue'
+import userCenter from './../component/user/user-center.vue'
 import login from './../component/login.vue'
 
 
@@ -60,7 +60,7 @@ const router = new VueRouter({
     {
       path: '/user',
       components: {
-        default: user,
+        default: userCenter,
         footerMenu : footMenu
       }
     },

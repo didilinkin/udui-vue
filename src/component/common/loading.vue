@@ -98,7 +98,7 @@
     top: 50%;
     margin-left: -50px;
     margin-top: -25px;
-    background: url("../../src/assets/images/common/loading.png") no-repeat;
+    background: url("../../../src/assets/images/common/loading.png") no-repeat;
     background-size: 100px 500px;
     -webkit-animation: loadingPlus 400ms steps(1) infinite;
     animation: loadingPlus 400ms steps(1) infinite;

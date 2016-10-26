@@ -1,6 +1,19 @@
 
+<template>
+    <div id="loading-cover" class="vertical-center" :class="show?'':'done'">
+        <a href="#" class="logo-img">
+            <img src="../../src/assets/images/common/logo.png" class="inline">
+        </a>
+    </div>
+</template>
+<script>
+    export default {
+        props:['show']
+    }
+</script>
+
 <style>
-     .vertical-center {
+    .vertical-center {
         display: -webkit-box;
         display: -moz-box;
         display: box;
@@ -25,24 +38,28 @@
         justify-content: center;
         -ms-flex-pack: center;
     }
-    .text-center {
-        text-align: center;
-    }
     #loading-cover{
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-    }
-    #loading-cover{
         z-index: 10;
-       /* background: rgba(228,0,127,.7);*/
-        background: rgba(255,39 ,114,1);
+        background: rgba(255,39 ,114,1) url('../../src/assets/images/common/logo-foot.png') no-repeat bottom center;
         color: #666;
-        padding: 4em 2em 6em;
         -webkit-transition: all,2.5s;
         transition: all,2.5s;
+        a{
+            display: block;
+            width: 5.02rem;
+            height: 2.25rem;
+            margin: 0 auto;
+        }
+        .logo-img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
     #loading-cover.done {
         opacity: 0;
@@ -50,30 +67,4 @@
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
     }
-     #loading-cover a{
-        height: auto;
-     }
-    .logo-img{
-        width: auto;
-        border-bottom: 1px solid #f5f5f5;
-    }
-    img.inline {
-        height: 50px;
-        width: 180px;
-    }
-    img.inline+span, span+img.inline {
-        margin-left: .5em;
-    }
 </style>
-<template>
-    <div id="loading-cover" class="vertical-center text-center" :class="show?'':'done'">
-        <a href="#" class="logo-img">
-            <img src="../../src/assets/images/common/logo.png" class="inline">
-        </a>
-    </div>
-</template>
-<script>
-    export default {
-        props:['show']
-    }
-</script>

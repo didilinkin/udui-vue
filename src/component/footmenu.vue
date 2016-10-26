@@ -24,8 +24,10 @@ export default {
 </script>
 
 <style>
-#footMenu{width: 100%; height: 0.92rem; background: #ccc; position: fixed; bottom: 0;overflow: hidden;}
-a{display: block; float: left; width: 20%; height: 100%; text-align: center; line-height: 0.92rem; font-size: 0.3rem;}
+#footMenu{
+  width: 100%; height: 0.92rem; background: #ccc; position: fixed; bottom: 0;overflow: hidden;
+}
+#footMenu a{display: block; float: left; width: 20%; height: 100%; text-align: center; line-height: 0.92rem; font-size: 0.3rem;}
 .cur{color: #ff2772;}
 
 </style>
