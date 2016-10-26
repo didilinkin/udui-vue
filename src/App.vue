@@ -73,6 +73,7 @@ header{
 }
 .index-fade-enter, .index-fade-leave-active {
   padding-right: 500px;
+  padding-left: 500px;
   opacity: 0;
 }
 </style>
