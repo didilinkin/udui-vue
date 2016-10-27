@@ -36,7 +36,7 @@ export default {
     getCarousel: 'getCarousel'
   }),
   created () {
-    this.$store.dispatch('getIndexData')
+    this.$store.dispatch('getIndexData');
   },
   name: 'app',
   components : components

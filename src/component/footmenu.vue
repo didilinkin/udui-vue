@@ -14,14 +14,41 @@
 export default {
   data () {
     return {
-      iscur: 1,
+      iscur: null,
       show : true
     }
+  },
+  watch: {
+    // 如果路由有变化，会再次执行该方法
+    '$route': 'changeiscur'
   },
   methods : {
   	heiline : function(num) {
       this.iscur = num;
-  	}
+  	},
+    changeiscur : function() {
+      console.log(this.$route.path)
+      let path = this.$route.path;
+      switch (path){
+        case '/index':
+        this.iscur = 1 
+        break;
+        case '/mall':
+        this.iscur = 2 
+        break;
+        case '/tcshop':
+        this.iscur = 3 
+        break;
+        case '/shopcar':
+        this.iscur = 4 
+        break;
+        case '/user':
+        this.iscur = 5 
+        break;
+        default:
+        break;
+      }
+    }
   }
 }
 </script>

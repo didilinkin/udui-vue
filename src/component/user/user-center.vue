@@ -4,17 +4,17 @@
     <div id="mall"  v-show="true">
     </div>
   </transition>
-    <div class="loginBox" :class="[isLogin?'loging':'ulogin']">
-      <div class="toLogin" v-if="!isLogin">
+    <div class="loginBox" :class="[userInfo.isLogin?'loging':'ulogin']" @click="showNum()">
+      <div class="toLogin" v-if="!userInfo.isLogin">
           <router-link to="/login">登录</router-link>
           <span>|</span>
           <router-link to="/login">注册</router-link>
       </div>
-      <div v-if="isLogin" class="uInfo">
+      <div v-if="userInfo.isLogin" class="uInfo">
         <router-link to="/login">
           <dl>
               <dd><img src="../../../src/assets/images/user/touxiang.png"></dd>
-              <dt class="uName">小蘑菇</dt>
+              <dt class="uName">{{userInfo.userName}}</dt>
               <dt class="uLevel">普通会员</dt>
               <dt class="fr">
               </dt>
@@ -106,20 +106,24 @@
 </template>
 
 <script type="text/javascript">
-
+import { mapGetters } from 'vuex'
 import headnav from './../common/header.vue'
+
 const components = { headnav }
 export default {
-  data () {
-    return {
-      isLogin : true
-    }
-  },
+  computed: mapGetters({
+    userInfo : 'userInfo'
+  }),
   components : components,
   methods : {
   	showNum : function() {
-  		alert(1)
+  		console.log(this.isLogin)
   	}
+  },
+  created () {
+    if (!this.userInfo.isLogin) {
+      this.$store.dispatch('getUserInfo');
+    }
   }
 }
 </script>

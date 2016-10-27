@@ -1,10 +1,8 @@
 <template>
-  <header class="nav-header">
-    <!-- <router-link class="backBtn" to="/index"></router-link> -->
-    <a class="backBtn" @click="backfn()"></a>
-    <p class="headTxt">{{title}}</p>
-    <a class="goAhead"><i class="iconfont icon-"></i></a>
-  </header>
+  <div class="cateMenu">
+    <ul class="">
+    </ul>
+</div>
 </template>
 
 <script type="text/javascript">
@@ -14,9 +12,6 @@ export default {
     }
   },
   methods : {
-  	backfn : function() {
-  		this.$router.go(-1)
-  	}
   },
   props : ['title']
 }

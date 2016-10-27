@@ -13,8 +13,8 @@
         <span v-show="passWord!=''" @click="passWord=''" class="del-txst"></span>
         <span class="show-pw"></span>
       </div>
-      <button class="subBtn" @click="loginfn({phone:userName,pwd:passWord,yy:true})">登录</button>
-      <button class="subBtn" @click="loginfn({phone:userName,pwd:passWord,yy:false})">验证</button>
+      <button class="subBtn" @click="loginfn({phone:userName,pwd:passWord})">登录</button>
+      <button class="subBtn" @click="loginfn({phone:userName,pwd:passWord})">验证</button>
       <ul class="clearfix other">
           <li><router-link to="/login">手机注册</router-link></li>
           <li class="divd">|</li>
@@ -54,7 +54,12 @@ export default {
     .pw-ico{background-position:0.14rem -2.3rem;}
     input{
       width: 5.3rem; height:100%; dispaly:block;float:left; font-size:0.36rem; color:#000; line-height:100%;
+      
     }
+    // input:-webkit-autofill {
+    // -webkit-box-shadow: 0 0 0px 1000px white inset;
+    // border: 1px solid #CCC!important;
+    // }
     span{dispaly:block;  height:100%;background:url('../../src/assets/images/ico.png') no-repeat;}
     .del-txst{width:0.46rem;float:left; background-position:0 -3.04rem;}
     .show-pw{width:0.46rem;float:right; background-position:0 -3.72rem}
