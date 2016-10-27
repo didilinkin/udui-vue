@@ -162,7 +162,7 @@ export default {
 .uMenu{
   overflow: hidden;
   ul{
-    width:
+    width: 7.52rem;
     li{
       width: 1.86rem; float:left; border-right:0.02rem solid #000;
       a{
