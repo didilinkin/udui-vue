@@ -19,11 +19,13 @@ export const getIndexData = ({ commit }, product) => {
 
 export const loginfn = ({ commit }, products) => {
   	console.log(products)
-  	userApi.login(products).then((res) => {
+    if (products.yy) {
+    userApi.login(products).then((res) => {
             console.log(res)
         });
-  	userApi.userMas().then((res) => {
+  }else{
+    userApi.userMas().then((res) => {
             console.log(res)
         });
-
+  }
 }
