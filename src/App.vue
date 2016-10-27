@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- 页面加载loading -->
-    <!-- <loading :show="!loading"></loading> -->
-    <cover :show="!loading"></cover>
-    <transition name="index-fade">
-      <div v-show="loading">
+    <!-- <loading :show="loading"></loading> -->
+    <cover :show="loading"></cover>
+    <transition name="slide-fade">
+      <div v-show="!loading">
         <header class="clearfix">
           <div class="sc">优兑商城</div>
         </header>
@@ -64,16 +64,5 @@ header{
     font-size: 0.27rem;
     color: #fff;
     float: left;
-}
-.index-fade-enter-active {
-  transition: all 2.3s ease;
-}
-.index-fade-leave-active {
-  transition: all .4s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.index-fade-enter, .index-fade-leave-active {
-  padding-right: 500px;
-  padding-left: 500px;
-  opacity: 0;
 }
 </style>

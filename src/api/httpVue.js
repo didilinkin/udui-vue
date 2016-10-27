@@ -4,7 +4,7 @@ Vue.use(VueResource);
 
 export default {
     data : {
-        serviceHost : 'http://api.udui.cn:8090/api'
+        serviceHost : 'http://192.168.0.10:8090/api/'
     },
     getDataVue : function(url) {
         var aaa = null;
