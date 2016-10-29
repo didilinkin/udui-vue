@@ -39,5 +39,5 @@ export default {
         width: 100%;
         height: 2.44rem;
     }  
-    .swiper-slide img {width: 100%; height: 100%;}
+.swiper-slide img {width: 100%; height: 100%;}
 </style>
