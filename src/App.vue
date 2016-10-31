@@ -3,7 +3,7 @@
     <!-- 页面加载loading -->
     <!-- <loading :show="loading"></loading> -->
     <cover :show="loading"></cover>
-    <transition name="slide-fade">
+    <transition name="app-fade">
       <div v-show="!loading">
         <header class="clearfix">
           <div class="sc">优兑商城</div>
@@ -56,7 +56,7 @@ header{
     background: #ff2772;
     height: 0.35rem;
   }
-.sc {    
+.sc {
     width: 100%;
     text-align: center;
     height: 0.35rem;
@@ -64,5 +64,16 @@ header{
     font-size: 0.27rem;
     color: #fff;
     float: left;
+}
+.app-fade-enter-active {
+  transition: all .3s ease;
+}
+.app-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.app-fade-enter, .app-fade-leave-active {
+  padding-right: 500px;
+  padding-left: 500px;
+  opacity: 0;
 }
 </style>

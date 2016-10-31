@@ -7,7 +7,7 @@ export const increment = ({ commit }, product) => {
 }
 
 export const getIndexData = ({ commit }, product) => {
-  indexApi.getProducts().then((res) => {
+  indexApi.getBannerList({appLinkId:'scrollPicture'}).then((res) => {
     var arr = res.body.module[0].list
     commit(types.Set_indexData, arr)
   });
@@ -15,7 +15,6 @@ export const getIndexData = ({ commit }, product) => {
   userApi.userMas().then((res) => {
       commit(types.Set_user_info, res.body);
   });
-  
 }
 
 
@@ -28,5 +27,16 @@ export const loginfn = ({ commit }, products) => {
 export const getUserInfo = ({ commit }, products) => {
   userApi.userMas().then((res) => {
       commit(types.Set_user_info, res.body);
+  });
+}
+
+export const getUserOrders = ({ commit }, products) => {
+  indexApi.getBannerList({appLinkId:'myOrderBanner'}).then((res) => {
+    let arr = res.body.module[0].list
+    commit(types.Set_orders_banner, arr)
+  });
+  let data = {pageNo: 1,pageSize: 10,orderNo: '',orderState: ''};
+  userApi.userOrders(data).then((res) => {
+      commit(types.Set_user_orders, res.body.module);
   });
 }
