@@ -89,7 +89,7 @@
       </ul>
     </div>
     <ul class="uSeeting">
-      <li>            
+      <li>
         <router-link to="/login">
           <i class="set-ico"></i>
           <p>设置</p>

@@ -4,7 +4,7 @@
     <!-- <loading :show="loading"></loading> -->
     <cover :show="loading"></cover>
     <transition name="app-fade">
-      <div v-show="!loading">
+      <div :show="!loading">
         <header class="clearfix">
           <div class="sc">优兑商城</div>
         </header>
