@@ -17,7 +17,6 @@ export const getIndexData = ({ commit }, product) => {
   });
 }
 
-
 export const loginfn = ({ commit }, products) => {
     userApi.login(products).then((res) => {
             console.log(res)
@@ -40,3 +39,18 @@ export const getUserOrders = ({ commit }, products) => {
       commit(types.Set_user_orders, res.body.module);
   });
 }
+
+export const getOrderInfo = ({ commit }, products) => {
+  userApi.orderInfo(products).then((res) => {
+    commit(types.Set_order_info,res.body.module)
+  });
+}
+
+export const getGoodsInfo = ({ commit }, products) => {
+  userApi.goodsInfo(products).then((res) => {
+    console.log(res)
+    commit(types.Set_goods_info,res.body.module)
+  });
+}
+
+

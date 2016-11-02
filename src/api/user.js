@@ -14,5 +14,15 @@ export default {
   	let data = {pageNo: products.pageNo,pageSize: products.pageSize,orderNo: products.orderNo,orderState: products.orderState};
     let url = httpVue.makeURL('/v1/order',data);
     return httpVue.getDataVue(url,{credentials:true});
+  },
+  orderInfo(products){
+    let link = '/v1/order/' + products.orderNo;
+    let url = httpVue.makeURL(link);
+    return httpVue.getDataVue(url,{credentials:true});
+  },
+  goodsInfo(products){
+    let link = '/v1/goods/' + products.goodsId;
+    let url = httpVue.makeURL(link);
+    return httpVue.getDataVue(url,{credentials:true});
   }
 }

@@ -9,3 +9,8 @@ export const userInfo = state => state.userInfo
 export const getOrdersCarousel = state => state.userInfo.carousel
 
 export const orderList = state => state.userInfo.orderList
+
+export const orderInfoData = state => state.userInfo.orderInfo
+
+export const goodsInfo = state => state.userInfo.goodsInfo
+

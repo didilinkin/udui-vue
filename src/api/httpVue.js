@@ -16,7 +16,7 @@ export default {
         return Vue.http.post(url,data,options);
     },
     jsonpDataVue : function (url) {
-        return Vue.http.sonp(url);
+        return Vue.http.jsonp(url);
     },
     makeURL : function (url,data){
         var link = this.data.serviceHost + url;

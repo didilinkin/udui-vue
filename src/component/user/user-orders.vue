@@ -10,7 +10,7 @@
 import { mapGetters } from 'vuex'
 import headnav from './../common/header.vue'
 import banner from './../common/banner.vue'
-import orderList from './../common/order-list.vue'
+import orderList from './order-list.vue'
 
 const components = { headnav,banner,orderList }
 export default {

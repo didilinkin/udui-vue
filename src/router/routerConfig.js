@@ -1,16 +1,18 @@
-import Vue from 'vue'
+import Vue       from 'vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import appIndex from './../App.vue'
-import footMenu from './../component/footmenu.vue'
-import mall from './../component/mall.vue'
-import tcshop from './../component/tcshop.vue'
-import shopcar from './../component/shopcar.vue'
+import appIndex   from './../App.vue'
+import footMenu   from './../component/footmenu.vue'
+import mall       from './../component/mall.vue'
+import tcshop     from './../component/tcshop.vue'
+import shopcar    from './../component/shopcar.vue'
 import userCenter from './../component/user/user-center.vue'
 import userOrders from './../component/user/user-orders.vue'
-import login from './../component/login.vue'
+import detail     from './../component/user/detail.vue'
+import orderInfo  from './../component/user/order-info.vue'
+import login      from './../component/login.vue'
 
 
 
@@ -70,6 +72,18 @@ const router = new VueRouter({
       components: {
         default: userOrders,
         footerMenu : footMenu
+      }
+    },
+    {
+      path: '/orderInfo/:orderNo',
+      components: {
+        default: orderInfo
+      }
+    },
+    {
+      path: '/detail/:goodsId',
+      components: {
+        default: detail
       }
     },
     {
