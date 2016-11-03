@@ -8,12 +8,15 @@ export default {
         serviceHost : 'http://api.udui.cn:8090/api'
     },
     getDataVue : function(url,options) {
-        var aaa = null;
         return Vue.http.get(url,options);
     },
     postDataVue: function (url, data,options) {
         Vue.http.options.emulateJSON = true;
         return Vue.http.post(url,data,options);
+    },
+    patchDataVue: function (url, data,options) {
+        Vue.http.options.emulateJSON = true;
+        return Vue.http.patch(url,data,options);
     },
     jsonpDataVue : function (url) {
         return Vue.http.jsonp(url);

@@ -22,7 +22,7 @@
       </div>
       <div class="btns">
         <router-link class="orderInfoBtn" to="/user">立即支付</router-link>
-        <router-link to="/user">取消订单</router-link>
+        <a @click="cancelOrder(data.no)">取消订单</a>
         <router-link :to="'/orderInfo/'+data.no">订单详情</router-link>
       </div>
     </div>
@@ -33,9 +33,8 @@
 import { mapGetters } from 'vuex'
 export default {
   methods : {
-  	toOrderInfo : function(num){
-      let str = 'orderInfo/'+ num;
-      this.$router.push(str)
+  	cancelOrder : function(num){
+      console.log(num)
   	}
   },
   props : ['orderList']

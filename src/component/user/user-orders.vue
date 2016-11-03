@@ -37,6 +37,6 @@ export default {
 
 <style lang="scss">
 .user-orders-box{
-
+  padding-bottom: 0.8rem;
 }
 </style>

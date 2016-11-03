@@ -7,7 +7,7 @@ const state = {
   	userName   : null,
     carousel   : null,
     orderList  : null,
-    orderInfo  : null,
+    orderInfo  : {receiverName:null},
     goodsInfo  : null
 }
 
