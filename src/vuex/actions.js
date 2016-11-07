@@ -53,4 +53,20 @@ export const getGoodsInfo = ({ commit }, products) => {
   });
 }
 
+export const getWallerData = ({ commit }, products) => {
+  userApi.myWaller().then((res) => {
+    console.log(res)
+    commit(types.Set_waller_data,res.body.module)
+  });
+}
+
+export const getEnvData = ({ commit }, products) => {
+  userApi.myEnvData(products).then((res) => {
+    console.log(res)
+    commit(types.Set_evnlop_data,res.body.module)
+  });
+}
+
+
+
 

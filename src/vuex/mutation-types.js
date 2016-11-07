@@ -5,4 +5,5 @@ export const Set_user_orders 	= 'Set_user_orders'
 export const Set_orders_banner 	= 'Set_orders_banner'
 export const Set_order_info 	= 'Set_order_info'
 export const Set_goods_info 	= 'Set_goods_info'
-
+export const Set_waller_data 	= 'Set_waller_data'
+export const Set_evnlop_data 	= 'Set_evnlop_data'

@@ -39,13 +39,13 @@
     <div class="uMenu">
       <ul class="clearfix">
           <li>
-            <router-link to="/login">
+            <router-link to="/myWallet">
               <i class="myWallet"></i>
               <p>我的钱包</p>
             </router-link>
           </li>
           <li>
-            <router-link to="/login">
+            <router-link to="/myEnvlop">
               <i class="hongbao"></i>
               <p>我的红包</p>
             </router-link>

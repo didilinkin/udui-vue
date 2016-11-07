@@ -26,5 +26,13 @@ export default {
     let link = '/v1/goods/' + products.goodsId;
     let url = httpVue.makeURL(link);
     return httpVue.getDataVue(url,{credentials:true});
+  },
+  myWaller(){
+    let url = httpVue.makeURL('/v1/user/purse/get');
+    return httpVue.getDataVue(url,{credentials:true});
+  },
+  myEnvData(products){
+    let url = httpVue.makeURL('/v1/lottery/envelope/myprizes',products);
+    return httpVue.getDataVue(url,{credentials:true});
   }
 }

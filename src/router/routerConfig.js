@@ -13,6 +13,8 @@ import userOrders from './../component/user/user-orders.vue'
 import detail     from './../component/user/detail.vue'
 import orderInfo  from './../component/user/order-info.vue'
 import login      from './../component/login.vue'
+import myWallet   from './../component/user/my-wallet.vue'
+import myEnvlop   from './../component/user/my-envlop.vue'
 
 
 
@@ -90,6 +92,18 @@ const router = new VueRouter({
       path: '/login',
       components: {
         default: login
+      }
+    },
+    {
+      path: '/myWallet',
+      components: {
+        default: myWallet
+      }
+    },
+    {
+      path: '/myEnvlop',
+      components: {
+        default: myEnvlop
       }
     }
     // {

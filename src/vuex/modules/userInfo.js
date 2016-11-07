@@ -8,7 +8,9 @@ const state = {
     carousel   : null,
     orderList  : null,
     orderInfo  : {receiverName:null},
-    goodsInfo  : null
+    goodsInfo  : null,
+    wallerData : null,
+    myEnvData  : null
 }
 
 // mutations
@@ -31,6 +33,12 @@ const mutations = {
   },
   [types.Set_goods_info](state,amount){
     state.goodsInfo = amount;
+  },
+  [types.Set_waller_data](state,amount){
+    state.wallerData = amount;
+  },
+  [types.Set_evnlop_data](state,amount){
+    state.myEnvData = amount;
   }
 }
 
