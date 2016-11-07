@@ -1,8 +1,10 @@
 import httpVue from './httpVue'
+import encrypt from './../../static/md5'
 
 export default {
   login (products) {
     let url = httpVue.makeURL('/v1/auth/login');
+    products.pwd = encrypt.hex_md5(products.pwd);
     let data = products;
     return httpVue.postDataVue(url,data,{credentials:true})
   },

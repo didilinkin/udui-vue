@@ -2,6 +2,7 @@
 <div class="user-orders-box">
   <loading :show="loading"></loading>
   <headnav v-bind:title="pagetitle"></headnav>
+  <banner :imgArr="goodsInfoData.product.imgs"></banner>
   {{goodsInfoData}}
 </div>
 </template>
